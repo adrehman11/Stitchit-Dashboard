@@ -1,0 +1,98 @@
+.grid-container {
+  display: inline-flex;
+  grid-template-columns: 1fr,1fr;
+
+  margin-left: 8vh;
+  margin-top: 1vh;
+
+}
+
+.grid2 {
+  display: inline-flex;
+  grid-template-columns: 1fr,1fr;
+  margin-left: 6vh;
+  margin-top: 10vh;
+
+}
+.grid2-item1 {
+
+  margin-left: 5vh;
+  height: 50vh;
+  width:65vh ;
+
+
+}
+.grid2-item2 {
+
+  height: 50vh;
+  width:65vh ;
+  margin-left: 8vh;
+
+
+}
+
+h1
+{
+  margin-top: 1vh;
+  margin-left: 1vh;
+  font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+  width:10vh;
+  height: 10vh;
+}
+
+.matcard2{
+  background-color: rgb(236, 236, 236);
+  box-shadow: black;
+  height: 25vh;
+  width:40vh ;
+}
+.matcard1{
+  background-color: rgb(236, 236, 236);
+  box-shadow: black;
+  height: 50vh;
+  width:65vh ;
+}
+.stat{
+  display: inline;
+  float: right;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-size: 3vh;
+
+}
+.number{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-size: 5vh;
+  margin-top: 2vh;
+  margin-left: 13vh;
+}
+.grid-item1 {
+
+
+  height: 20vh;
+  width:40vh ;
+
+
+}
+.grid-item2 {
+
+  height: 20vh;
+  width:40vh ;
+
+  margin-left: 11vh;
+
+}
+
+.grid-item3 {
+
+  height: 20vh;
+  width:40vh ;
+
+  margin-left: 12vh;
+
+}
+
+

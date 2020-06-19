@@ -1,0 +1,20 @@
+.wrapper {
+    display: inline-flex;
+    grid-template-columns: 1fr;
+  
+    margin-left: 2vh;
+    margin-top: 1vh;
+  
+  }
+  .box1 {
+  
+    margin-left: 2vh;
+    height: 90vh;
+    width:150vh ;
+  
+  
+  }
+  h1{
+    margin-left: 10vh;
+    margin-top: 4vh;
+  }

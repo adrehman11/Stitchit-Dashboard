@@ -1,0 +1,51 @@
+<div class=wrapper>
+  <div class=box1>
+    <mat-card class=main>
+      <div class=imagecenter>
+        <img class=img src={{imageurl}} alt="">
+      </div>
+      <hr>
+      <div class=text>
+        <div>
+          <img class=icons src="../../assets/icons/name.svg" alt="">
+          <P>Name : {{name}}</P>
+        </div>
+
+        <div>
+          <img class=icons src="../../assets/icons/call.svg" alt="">
+          <P>Contact : {{contact}}</P>
+        </div>
+        <div>
+          <img class=icons src="../../assets/icons/gmail.svg" alt="">
+          <P>Email : {{email}}</P>
+        </div>
+
+        <div>
+          <img class=icons src="../../assets/icons/lavatory.svg" alt="">
+          <P>Gender : {{gender}}</P>
+        </div>
+        <div>
+          <img class=icons src="../../assets/icons/anonymous.svg" alt="">
+          <P>profile : {{utype}}</P>
+        </div>
+        <div *ngIf="bol">
+          <img class=icons src="../../assets/icons/star.svg" alt="">
+          <P>Rating : {{rating}}</P>
+        </div>
+      </div>
+      <div class=button1>
+        <div class=sub-button1>
+          <button (click)="onDelete()" mat-raised-button color="warn">Delete User</button>
+        </div>
+        <div class=sub-button2>
+          <button (click)="onsendwarning()" mat-raised-button color="warn">Send warning</button>
+        </div>
+
+      </div>
+
+
+
+    </mat-card>
+  </div>
+
+</div>

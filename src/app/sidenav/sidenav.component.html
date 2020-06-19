@@ -1,0 +1,26 @@
+
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav class=sidenav mode="side" opened>
+    <div class=headers>
+      <img class=abc src='../../assets/images/img_avatar.png' alt="Avatar">
+     <div class = "welcome">
+      Welcome to Stitichit
+     </div>
+    </div>
+    <hr>
+    <div class=main-content>
+      <ul>
+
+        <li><a  [routerLink]="['/dashboard/', {outlets: {'main': ['statistics']}}]"><img class=icons src="../../assets/icons/dashboard.svg" alt="">     Dashboard</a></li>
+        <li><a  [routerLink]="['/dashboard/', {outlets: {'main': ['suggestionproblem']}}]"><img class=icons src="../../assets/icons/suggestionreports.svg" alt="">Suggestions/problems</a></li>
+        <li><a  [routerLink]="['/dashboard/', {outlets: {'main': ['userlist']}}]"><img class=icons src="../../assets/icons/user.svg" alt="">     Users</a></li>
+        <li><a [routerLink]="['/dashboard/', {outlets: {'main': ['orderlist']}}]"><img class=icons src="../../assets/icons/orders.svg" alt="">     Orders</a></li>
+      </ul>
+
+    </div>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+   <router-outlet name=main></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,62 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+.sidenav{
+  background-image: url('../../assets/images/sidnav.jpg');
+  align-items: center;
+  width:47vh;
+  box-shadow: black;
+}
+.abc {
+  margin-top: 10px;
+  margin-left: 4px;
+  border: 2px solid transparent;
+  border-color: black;
+  border-radius: 50%;
+  width: 10vh;
+  height: 10vh;
+}
+.headers{
+  display: flex;
+}
+.welcome{
+  margin-top: 5vh;
+  margin-left: 4vh;
+  font-size: 3vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+hr{
+  color: black;
+  margin-top: 6vh;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic Medium;
+}
+ul li{
+  padding: 6vh;
+}
+ul  li a{
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+  padding: 3vh;
+  font-style: italic;
+  transition: 0.6s ease;
+
+}
+ul li a:hover{
+  background-color:rgb(202, 50, 23);
+  color: rgb(173, 173, 173);
+}
+.icons{
+  margin-top: 0vh;
+  width:4vh;
+  height:4vh;
+}

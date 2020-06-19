@@ -1,0 +1,31 @@
+.wrapper {
+  display: inline-flex;
+  grid-template-columns: 1fr;
+
+  margin-left: 2vh;
+  margin-top: 3vh;
+
+}
+.box1 {
+
+  margin-left: 2vh;
+  height: 90vh;
+  width:150vh ;
+
+
+}
+.main{
+  background-color: rgb(207, 207, 207);
+  height: 90vh;
+  width:150vh ;
+}
+img{
+  border-radius: 50%;
+  border:2px solid black;
+  width: 17vh;
+  height: 17vh;
+}
+.imagecenter{
+  display: inline;
+  margin-left: 60vh;
+}

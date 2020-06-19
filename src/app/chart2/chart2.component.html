@@ -1,0 +1,13 @@
+<div *ngIf="chartready">
+  <div>
+    <canvas baseChart
+    height= 80%,
+    width=100%,
+    [data]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [chartType]="doughnutChartType">
+    </canvas>
+  </div>
+
+</div>
+

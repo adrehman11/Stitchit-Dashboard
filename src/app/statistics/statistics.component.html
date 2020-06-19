@@ -1,0 +1,52 @@
+<h1>Dashboard</h1>
+
+<div class="grid-container">
+  <div class="grid-item1">
+    <mat-card class="matcard2">
+      <img src='../../assets/icons/customer.svg' alt="Avatar">
+      <div class=stat>
+
+        Total Customer</div>
+      <hr>
+      <div class=number>{{customers}}</div>
+    </mat-card >
+  </div>
+  <div class="grid-item2">
+    <mat-card class="matcard2">
+      <img src='../../assets/icons/tailors.svg' alt="Avatar">
+      <div class=stat>
+
+        Total Tailors</div>
+      <hr>
+      <div class=number>{{tailors}}</div>
+    </mat-card>
+  </div>
+  <div class="grid-item3">
+    <mat-card class="matcard2">
+      <img src='../../assets/icons/ordercompleted.svg' alt="Avatar">
+      <div class=stat>
+
+        Total Order</div>
+      <hr>
+      <div class=number>{{orders}}</div>
+    </mat-card>
+  </div>
+</div>
+<div class=grid2>
+  <div class= grid2-item1>
+    <mat-card class="matcard1">
+      <div class=graph>
+        <app-chart1></app-chart1>
+      </div>
+    </mat-card>
+  </div>
+  <div class= grid2-item2>
+    <mat-card class="matcard1">
+      <div class=graph>
+        <app-chart2></app-chart2>
+      </div>
+
+    </mat-card>
+  </div>
+
+</div>

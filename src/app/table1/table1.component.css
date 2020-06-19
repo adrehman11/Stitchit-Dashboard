@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+}
+img
+{
+  width: 4vh;
+  height: 4vh;
+}
+mat-cell{
+ padding: 2vh;
+}
+mat-row
+{
+  transition: 1s ease;
+}
+
+mat-row:hover {
+  background-color: rgb(173, 173, 173);
+}

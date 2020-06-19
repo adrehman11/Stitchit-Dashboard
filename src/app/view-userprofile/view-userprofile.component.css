@@ -1,0 +1,62 @@
+.wrapper {
+  display: inline-flex;
+  grid-template-columns: 1fr;
+
+  margin-left: 2vh;
+  margin-top: 3vh;
+
+}
+.box1 {
+
+  margin-left: 2vh;
+  height: 90vh;
+  width:150vh ;
+
+
+}
+.main{
+  background-color: rgb(207, 207, 207);
+  height: 90vh;
+  width:150vh ;
+}
+.icons
+{
+  width: 5vh;
+  height:5vh
+}
+.img{
+  border-radius: 50%;
+  border:2px solid black;
+  width: 16vh;
+  height: 16vh;
+}
+.imagecenter{
+  display: inline;
+  margin-left: 65vh;
+}
+.text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3vh;
+  font-style: italic;
+ margin-left: 30vh;
+  padding:2vh;
+}
+.text p {
+  padding: 2vh;
+}
+.text div{
+  display: flex;
+}
+.button1{
+display: inline-flex;
+  margin-top:2vh;
+  margin-left:55vh;
+}
+.sub-button1{
+
+  margin-right: 10vh ;
+}
+.sub-button1 button{
+  width:18vh;
+}
+

@@ -1,0 +1,39 @@
+<body>
+  <div class=main>
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class=images>
+          <img src='../../assets/images/img_avatar.png' alt="Avatar">
+          <div class=text>
+            Welcome to Stitchit
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <mat-card>
+          <div class=inputs>
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput type="text" [(ngModel)]="Email"  >
+            </mat-form-field>
+          </div>
+          <div class=inputs>
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input matInput type="text" [(ngModel)]="Password"  >
+            </mat-form-field>
+          </div>
+
+            <button
+            (click)="onlogin()"
+             mat-raised-button
+            color="warn">Login</button>
+
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>

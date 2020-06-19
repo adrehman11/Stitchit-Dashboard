@@ -1,0 +1,38 @@
+.wrapper {
+  display: inline-flex;
+  grid-template-columns: 1fr,1fr;
+
+  margin-left: 2vh;
+  margin-top: 1vh;
+
+}
+.box1 {
+
+  margin-left: 2vh;
+  height: 90vh;
+  width:70vh ;
+
+
+}
+.box2 {
+
+    margin-left: 5vh;
+    height: 90vh;
+    width:70vh ;
+  }
+  .heading1
+  {
+    margin-left:10vh ;
+  }
+  .heading2
+  {
+    margin-left: 60vh;
+  }
+  .heading
+  {
+    display:flex;
+    margin-top: 4vh;
+
+  }
+
+

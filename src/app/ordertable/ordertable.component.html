@@ -1,0 +1,32 @@
+<div>
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="OrderID">
+          <mat-header-cell *matHeaderCellDef> OrderID </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.OrderID}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="Dresstype">
+          <mat-header-cell *matHeaderCellDef> DressType </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.DressType}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="TailorName">
+          <mat-header-cell *matHeaderCellDef> TailorName </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.TailorName}} </mat-cell>
+        </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="CustomerName">
+          <mat-header-cell *matHeaderCellDef> CustomerName </mat-header-cell>
+          <mat-cell *matCellDef="let element" >{{element.CustomerName}} </mat-cell>
+        </ng-container>
+
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="onRowClicked(row)"></mat-row>
+      </mat-table>
+</div>
