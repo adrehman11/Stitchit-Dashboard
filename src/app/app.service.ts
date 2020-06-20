@@ -17,11 +17,38 @@ private utype;
 private updatec = new Subject<String>();
 private updatet = new Subject<String>();
 private updateo = new Subject<String>();
+private suggestionid;
+private sutype;
+private putype;
+private problemid;
+
+
+
+
+
 
     login(Email,Password){
         return this.http.post<{message:String}>
         (this.urli+"/dashboard/adminlogin",{"Email":Email,"Password":Password})
     }
+    viewsuggestion(ID,utype){
+      return this.http.post<{Image:String,ID:String,utype:String,discription:String,name:String}>
+      (this.urli+"/dashboard2/viewsuggestionproblem",{"id":ID,"utype":utype,"type":"Suggestion"})
+  }
+  viewproblem(ID,utype){
+    return this.http.post<{Image:String,ID:String,utype:String,discription:String,name:String}>
+    (this.urli+"/dashboard2/viewsuggestionproblem",{"id":ID,"utype":utype,"type":"Problem"})
+}
+sendresponse(msg,ID,usertype)
+{
+  return this.http.post<{message:String}>
+  (this.urli+"/dashboard2/sendReponse",{"msg":msg,"id":ID,"utype":usertype,"type":"Suggestion"})
+}
+sendresponseprob(msg,ID,usertype)
+{
+  return this.http.post<{message:String}>
+  (this.urli+"/dashboard2/sendReponse",{"msg":msg,"id":ID,"utype":usertype,"type":"Problem"})
+}
 
     getuserlist(){
       return this.http.get<{resdata:[]}>(this.urli+"/dashboard/getusers")
@@ -85,6 +112,31 @@ private updateo = new Subject<String>();
     {
       this.orderID=ID;
 
+    }
+    setsuggestinID(ID,usertype)
+    {
+      this.sutype=usertype;
+      this.suggestionid=ID;
+
+    }
+    getsuggestinID(){
+      return (this.suggestionid)
+    }
+    getsutype(){
+      return (this.sutype)
+    }
+    setproblemID(ID,usertype)
+    {
+      this.putype=usertype;
+      this.problemid=ID;
+
+    }
+    getproblemID(){
+      console.log(this.problemid)
+      return (this.problemid)
+    }
+    getputype(){
+      return (this.putype)
     }
     getorderID(){
       return (this.orderID)

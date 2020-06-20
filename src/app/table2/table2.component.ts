@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class Table2Component implements  OnInit ,OnDestroy  {
 
   constructor(private router: Router,public AppServices:Appservice) { }
-  displayedColumns: string[] = ['ID', 'Name','Status'];
+  displayedColumns: string[] = ['ID', 'Utype','Status'];
   dataSource ;
   private dashboradsub: Subscription;
   ngOnInit(): void {
@@ -24,7 +24,9 @@ export class Table2Component implements  OnInit ,OnDestroy  {
   }
   onRowClicked(row)
   {
-    console.log(row.position);
+    this.AppServices.setproblemID(row.ID,row.Utype)
+    console.log(row.ID,row.Utype)
+    this.router.navigateByUrl("dashboard/(main:viewproblems)")
   }
   ngOnDestroy(): void {
     this.dashboradsub.unsubscribe();

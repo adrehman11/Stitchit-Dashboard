@@ -1,0 +1,73 @@
+.wrapper {
+  display: inline-flex;
+  grid-template-columns: 1fr;
+
+  margin-left: 2vh;
+  margin-top: 3vh;
+
+}
+.box1 {
+
+  margin-left: 2vh;
+  height: 90vh;
+  width:150vh ;
+
+
+}
+.main{
+  background-color: rgb(212, 212, 212);
+  height: 95vh;
+  width:150vh ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3vh;
+  font-style: italic;
+
+}
+.mat1{
+  display: inline-flex;
+  padding: 2vh;
+}
+.mat1 p{
+  padding:2vh;
+}
+.mat2{
+  display: inline-flex;
+  padding: 2vh;
+}
+.mat2 p{
+  margin-top: 10vh;
+  padding:2vh;
+}
+img{
+
+  border:2px solid black;
+  width: 30vh;
+  height: 30vh;
+}
+.imagecenter{
+  display: inline;
+  margin-left: 60vh;
+}
+.textareas{
+  margin-left: 10vh;
+
+
+}
+.discribemat
+{
+  background-color: rgb(212, 212, 212);
+  height:45vh
+}
+.replymat
+{
+  background-color: rgb(212, 212, 212);
+  height:45vh
+}
+.discriptionrow{
+  width: 70vh;
+}
+.sub-button1
+{
+     margin-top: 10vh;
+     margin-left: 5vh;
+}

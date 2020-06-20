@@ -15,17 +15,59 @@
 
 }
 .main{
-  background-color: rgb(207, 207, 207);
-  height: 90vh;
+  background-color: rgb(212, 212, 212);
+  height: 95vh;
   width:150vh ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3vh;
+  font-style: italic;
+
+}
+.mat1{
+  display: inline-flex;
+  padding: 2vh;
+}
+.mat1 p{
+  padding:2vh;
+}
+.mat2{
+  display: inline-flex;
+  padding: 2vh;
+}
+.mat2 p{
+  margin-top: 10vh;
+  padding:2vh;
 }
 img{
-  border-radius: 50%;
+
   border:2px solid black;
-  width: 17vh;
-  height: 17vh;
+  width: 30vh;
+  height: 30vh;
 }
 .imagecenter{
   display: inline;
   margin-left: 60vh;
+}
+.textareas{
+  margin-left: 10vh;
+
+
+}
+.discribemat
+{
+  background-color: rgb(212, 212, 212);
+  height:45vh
+}
+.replymat
+{
+  background-color: rgb(212, 212, 212);
+  height:45vh
+}
+.discriptionrow{
+  width: 70vh;
+}
+.sub-button1
+{
+     margin-top: 10vh;
+     margin-left: 5vh;
 }

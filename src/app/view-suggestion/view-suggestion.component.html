@@ -1,16 +1,42 @@
 <div class= wrapper>
   <div class=box1>
     <mat-card class=main>
-      <div class=imagecenter>
-        <img src="../../assets/images/img_avatar.png" alt="">
+      <div class=discribe>
+        <div class=discribemat>
+          <div class=mat1>
+            <img src={{Image}} alt="">
+            <div>
+              <P>Suggestion By: {{name}}</P>
+              <p>Suggestion ID: {{ID}}</p>
+              <div class= discriptionrow>
+                <p> Discription:  {{Discription}}</p>
+              </div>
+
+            </div>
+            <p>User Type: {{usertype}}</p>
+
+          </div>
+        </div>
       </div>
-      <hr>
-      <div>
-        
-        <P>Name : {{name}}</P>
-        <P>Contact : {{contact}}</P>
-        <P>Email : {{email}}</P>
-        <P>Gender : {{gender}}</P>
+
+      <div class=reply>
+        <div class=replymat>
+          <div class=mat2>
+              <p>Write Your Response:</p>
+              <div class= textareas>
+                <mat-form-field >
+                  <textarea matInput rows=3 [(ngModel)]="msg" >
+                  </textarea>
+                </mat-form-field>
+              </div>
+              <div class=sub-button1>
+                <button (click)="onSendResponse()" mat-raised-button color="warn">Send Response</button>
+              </div>
+
+
+
+          </div>
+        </div>
       </div>
     </mat-card>
   </div>

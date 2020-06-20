@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class Table1Component implements  OnInit ,OnDestroy {
 
   constructor(private router: Router,public AppServices:Appservice) { }
-  displayedColumns: string[] = ['ID', 'Name','Status'];
+  displayedColumns: string[] = ['ID', 'Utype','Status'];
   dataSource ;
   private dashboradsub: Subscription;
   ngOnInit(): void {
@@ -23,8 +23,10 @@ export class Table1Component implements  OnInit ,OnDestroy {
   }
   onRowClicked(row)
   {
+
+    this.AppServices.setsuggestinID(row.ID,row.Utype)
     this.router.navigateByUrl("dashboard/(main:viewsuggestion)")
-    console.log(row.position);
+
   }
   ngOnDestroy(): void {
     this.dashboradsub.unsubscribe();

@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ViewUserprofileComponent } from './view-userprofile/view-userprofile.component';
+import { ViewProblemsComponent } from './view-problems/view-problems.component';
 
 
 
@@ -23,9 +24,11 @@ const routes: Routes = [
     { path: 'userlist'                   , component: ListusersComponent     , outlet:'main'      },
     { path: 'orderlist'                   , component: OrderslistComponent     , outlet:'main'      },
     {path: 'user-profle', component: ViewUserprofileComponent, outlet:'main'    },
+    {path: 'viewproblems', component: ViewProblemsComponent ,outlet:'main' },
     {path: 'viewsuggestion', component: ViewSuggestionComponent ,outlet:'main' },
     {path: 'viewuserprofile', component: ViewUserprofileComponent ,outlet:'main' },
     {path: 'vieworderdetails', component: ViewOrdersComponent ,outlet:'main' },
+
 
   ]
 }
