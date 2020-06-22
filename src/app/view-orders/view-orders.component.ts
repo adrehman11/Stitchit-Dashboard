@@ -2,6 +2,12 @@ import { Component, OnInit ,OnDestroy} from '@angular/core';
 import {Appservice} from '../app.service';
 import{ Subscription }from 'rxjs';
 import { Router } from '@angular/router';
+// import {
+//   DomSanitizationService,
+//   SafeHtml,
+//   SafeUrl,
+//   SafeStyle
+// } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view-orders',
@@ -20,7 +26,7 @@ export class ViewOrdersComponent implements OnInit ,OnDestroy{
   Pipe
   Button
   OderType
-  Image='data:image/png;base64,'
+  Image="data:image/png;base64,"
   OrderDate
   OderDeadline
   Coments

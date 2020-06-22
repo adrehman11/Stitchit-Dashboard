@@ -2,6 +2,7 @@ import { Component, OnInit ,OnDestroy} from '@angular/core';
 import {Appservice} from '../app.service';
 import{ Subscription }from 'rxjs';
 import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view-userprofile',
@@ -9,12 +10,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./view-userprofile.component.css']
 })
 export class ViewUserprofileComponent implements OnInit,OnDestroy {
-  constructor(private router: Router,public AppServices:Appservice) { }
+  constructor(private router: Router,public AppServices:Appservice, private sanitizer: DomSanitizer) { }
   contact
   email
   gender
   name
-  rating="2.0"
+  rating
   bol= false;
   userid
   utype
@@ -31,9 +32,11 @@ export class ViewUserprofileComponent implements OnInit,OnDestroy {
       this.name = res.Name
       this.gender = res.Gender
       this.contact=res.Contact
-      this.imageurl= this.imageurl+res.Image
+      this.imageurl=this.imageurl+res.Image
+     this.sanitizer.bypassSecurityTrustStyle(`url('${ this.imageurl} ')`);
       if(this.utype=="Tailor"){
         this.bol=true
+        this.rating=res.Rating
       }
     })
   }
@@ -51,6 +54,7 @@ export class ViewUserprofileComponent implements OnInit,OnDestroy {
     })
   }
   onsendwarning(){
+
     this.dashboradsub  = this.AppServices.sendwarning(this.userid,this.utype).subscribe((resdata)=>{
       if(resdata.message=="Warning send")
       {

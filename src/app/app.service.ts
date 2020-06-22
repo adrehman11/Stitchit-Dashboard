@@ -28,8 +28,10 @@ private problemid;
 
 
     login(Email,Password){
+      console.log(this.urli)
         return this.http.post<{message:String}>
         (this.urli+"/dashboard/adminlogin",{"Email":Email,"Password":Password})
+        
     }
     viewsuggestion(ID,utype){
       return this.http.post<{Image:String,ID:String,utype:String,discription:String,name:String}>
@@ -59,11 +61,12 @@ sendresponseprob(msg,ID,usertype)
     getsuggestion(){
       return this.http.get<{resdata:[]}>(this.urli+"/dashboard/getsuggestion")
     }
+   
     getproblems(){
       return this.http.get<{resdata:[]}>(this.urli+"/dashboard/getproblems")
     }
     getuserinformation(id,utype){
-      return this.http.post<{Name:String,Email:String,Contact:String,Gender:String,Image:String}>
+      return this.http.post<{Name:String,Email:String,Contact:String,Gender:String,Image:String,Rating:String}>
       (this.urli+"/dashboard2/getuserinformation",{"id":id ,"utype":utype})
     }
     getorderinformation(id){

@@ -2,7 +2,8 @@
   <div class = mainbox>
     <mat-card class= main>
       <div class=imagecenter>
-        <img  class=img src={{Image}} alt=""><div class=imagestyle>Dress Image</div>
+        <img  class=img [ngStyle]="{'background-image':'url('+Image+')'}">
+        <div class=imagestyle>Dress Image</div>
       </div>
       <div class=row1>
 
