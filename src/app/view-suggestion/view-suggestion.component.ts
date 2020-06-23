@@ -1,7 +1,8 @@
-import { Component, OnInit ,OnDestroy} from '@angular/core';
+import { Component, OnInit ,OnDestroy } from '@angular/core';
 import {Appservice} from '../app.service';
 import{ Subscription }from 'rxjs';
 import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-view-suggestion',
@@ -17,7 +18,8 @@ ID;
 usertype;
 Discription;
 msg;
-constructor(private router: Router,public AppServices:Appservice) { }
+bol=false;
+constructor(private router: Router,public AppServices:Appservice, private sanitizer: DomSanitizer) { }
 private dashboradsub: Subscription;
   ngOnInit(): void {
     this.utype = this.AppServices.getsutype()
@@ -28,10 +30,13 @@ private dashboradsub: Subscription;
      this.Image= this.Image+resdata.Image;
      this.name=resdata.name;
      this.Discription=resdata.discription
-
+      this.bol=true;
     })
 
   }
+  public getSantizeUrl(url : string) {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
+}
   ngOnDestroy(): void {
    this.dashboradsub.unsubscribe();
    }

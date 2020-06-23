@@ -27,8 +27,8 @@
 .img{
   border-radius: 50%;
   border:2px solid black;
-  width: 16vh;
-  height: 16vh;
+  width: 18vh;
+  height: 18vh;
 }
 .imagecenter{
   display: inline;

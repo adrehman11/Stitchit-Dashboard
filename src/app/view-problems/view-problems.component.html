@@ -1,10 +1,12 @@
+<div *ngIf="bol" >
+
 <div class= wrapper>
   <div class=box1>
     <mat-card class=main>
       <div class=discribe>
         <div class=discribemat>
           <div class=mat1>
-            <img src={{Image}} alt="">
+            <img [src]=getSantizeUrl(Image)>
             <div>
               <P>Suggestion By: {{name}}</P>
               <p>Suggestion ID: {{ID}}</p>
@@ -40,5 +42,7 @@
       </div>
     </mat-card>
   </div>
+
+</div>
 
 </div>

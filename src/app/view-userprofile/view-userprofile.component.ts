@@ -19,6 +19,7 @@ export class ViewUserprofileComponent implements OnInit,OnDestroy {
   bol= false;
   userid
   utype
+  khol=false;
  imageurl='data:image/png;base64,'
   private dashboradsub: Subscription;
 
@@ -33,7 +34,7 @@ export class ViewUserprofileComponent implements OnInit,OnDestroy {
       this.gender = res.Gender
       this.contact=res.Contact
       this.imageurl=this.imageurl+res.Image
-     this.sanitizer.bypassSecurityTrustStyle(`url('${ this.imageurl} ')`);
+      this.khol=true;
       if(this.utype=="Tailor"){
         this.bol=true
         this.rating=res.Rating
@@ -67,6 +68,9 @@ export class ViewUserprofileComponent implements OnInit,OnDestroy {
     })
 
   }
+  public getSantizeUrl(url : string) {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
+}
   ngOnDestroy(): void {
     this.dashboradsub.unsubscribe();
    }

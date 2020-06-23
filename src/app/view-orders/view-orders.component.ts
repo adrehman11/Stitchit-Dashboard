@@ -2,12 +2,7 @@ import { Component, OnInit ,OnDestroy} from '@angular/core';
 import {Appservice} from '../app.service';
 import{ Subscription }from 'rxjs';
 import { Router } from '@angular/router';
-// import {
-//   DomSanitizationService,
-//   SafeHtml,
-//   SafeUrl,
-//   SafeStyle
-// } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-view-orders',
@@ -35,11 +30,11 @@ export class ViewOrdersComponent implements OnInit ,OnDestroy{
   DressPrice
   Rating
   RatingStatus
-
+  bol=false;
   orderid
 
 private dashboradsub: Subscription;
-  constructor(private router: Router,public AppServices:Appservice) { }
+  constructor(private router: Router,public AppServices:Appservice, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.orderid=this.AppServices.getorderID()
@@ -63,8 +58,12 @@ private dashboradsub: Subscription;
         this.DressPrice=resdata.DressPrice
         this.Rating=resdata.Rating
         this.RatingStatus=resdata.ratingStatus
+        this.bol=true;
     })
 
+}
+public getSantizeUrl(url : string) {
+  return this.sanitizer.bypassSecurityTrustUrl(url);
 }
 onDeleteOrder(){
   this.dashboradsub  = this.AppServices.orderDelete(this.orderid).subscribe((resdata)=>{

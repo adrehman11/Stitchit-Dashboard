@@ -44,6 +44,11 @@ img{
   width: 30vh;
   height: 30vh;
 }
+.test{
+  border:2px solid black;
+  width: 30vh;
+  height: 30vh;
+}
 .imagecenter{
   display: inline;
   margin-left: 60vh;
