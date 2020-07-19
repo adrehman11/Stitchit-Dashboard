@@ -29,6 +29,7 @@ export class ViewUserprofileComponent implements OnInit,OnDestroy {
     this.userid =this.AppServices.getuserID()
     this.dashboradsub= this.AppServices.getuserinformation(this.userid,this.utype)
     .subscribe((res)=>{
+      console.log(res)
       this.email= res.Email;
       this.name = res.Name
       this.gender = res.Gender

@@ -7,7 +7,7 @@ import {Subject}from "rxjs";
 
 export class Appservice{
     constructor(private  http:HttpClient){}
- private urli ="http://localhost:3000";
+ private urli ="https://stitchitv2.herokuapp.com";
  private customers;
  private userID;
  private orderID;
@@ -31,7 +31,7 @@ private problemid;
       console.log(this.urli)
         return this.http.post<{message:String}>
         (this.urli+"/dashboard/adminlogin",{"Email":Email,"Password":Password})
-        
+
     }
     viewsuggestion(ID,utype){
       return this.http.post<{Image:String,ID:String,utype:String,discription:String,name:String}>
@@ -61,7 +61,7 @@ sendresponseprob(msg,ID,usertype)
     getsuggestion(){
       return this.http.get<{resdata:[]}>(this.urli+"/dashboard/getsuggestion")
     }
-   
+
     getproblems(){
       return this.http.get<{resdata:[]}>(this.urli+"/dashboard/getproblems")
     }
